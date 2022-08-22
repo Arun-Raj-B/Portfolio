@@ -428,7 +428,7 @@
                                     <p class="error text-danger"></p>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" name="e-mail" placeholder="Your Email"/>
+                                    <input type="text" class="form-control p-4" id="email" name="e-mail" placeholder="Your Email"/>
                                     <p class="error text-danger"></p> <!-- email -->
                                 </div>
                             </div>
@@ -443,6 +443,9 @@
                             <div>
                                 <button class="btn btn-outline-primary" type="submit" >Send
                                     Message</button>
+                            </div>
+                            <div id="alert">
+                                <p id="show alert">sdfdsfdsfdsf</p>
                             </div>
                         </form>
                     </div>
@@ -485,27 +488,6 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-
-    <!-- Submission -->
-    <script>
-        $("#submit-form").submit((e)=>{
-            e.preventDefault()
-            $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbz8WQ00hm8F_qis6Xc1Qbman_Rabdy79Y0ZbL53vJibsRUMKB5DEHBqmgdRx3PIuTJsPA/exec",
-                data:$("#submit-form").serialize(),
-                method:"post",
-                success:function (response){
-                    alert("Form submitted successfully")
-                    // window.location.reload()
-                    //window.location.href="https://google.com"
-                },
-                error:function (err){
-                    alert("Something Error")
-    
-                }
-            })
-        })
-    </script>
 
 
     <!-- JavaScript Libraries -->
