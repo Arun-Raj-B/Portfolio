@@ -6,6 +6,7 @@
     let message = document.getElementById("message");
     
     let error=document.getElementsByClassName("error");
+    let show=document.getElementById("show");
     
 function validate()
 {
@@ -103,8 +104,12 @@ $("#submit-form").submit((e)=>{
         data:$("#submit-form").serialize(),
         method:"post",
         success:function (response){
-            alert("Form submitted successfully")
-            window.location.reload()
+            // alert("Form submitted successfully")
+            show.style.display = "block";
+            setTimeout(() => {
+                window.location.reload()
+            },3000);
+            
             //window.location.href="https://google.com"
         },
         error:function (err){
